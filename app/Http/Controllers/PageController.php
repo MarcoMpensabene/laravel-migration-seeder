@@ -14,7 +14,8 @@ class PageController extends Controller
 
     public function trainList()
     {
-        $trainList = Train::all();
+        $date = '2024-07-19'; // data di oggi
+        $trainList = Train::where('Data', '=', $date)->get();
         return view('pages.trainList', compact("trainList"));
     }
 }
