@@ -12,7 +12,7 @@
             <h1>{{$train->Azienda}}</h1>
             <p>Stazione di Partenza : {{$train->Stazione_di_partenza}}</p>
             <p>Stazione di Arrivo : {{$train->Stazione_di_arrivo}}</p>
-            <p>Data e Orario : {{$train->Orario_di_partenza}} ---- {{$train->Orario_di_arrivo}}</p>
+            <p> Orario : {{$train->Orario_di_partenza}} ---- {{$train->Orario_di_arrivo}}</p>
             <h2>CODICE TRENO : {{$train->Codice_Treno}}</h2>
             @if ($train->In_orario)
                 <p>IL TRENO ARRIVERA' IN ORARIO</p>

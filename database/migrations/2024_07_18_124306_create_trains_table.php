@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string("Azienda", 20);
             $table->string("Stazione_di_partenza", 40);
             $table->string("Stazione_di_arrivo", 40);
-            $table->dateTime("Orario_di_partenza");
-            $table->dateTime("Orario_di_arrivo");
+            $table->time("Orario_di_partenza");
+            $table->time("Orario_di_arrivo");
             $table->string("Codice_Treno", 20);
             $table->unsignedTinyInteger("Numero_Carrozze");
             $table->boolean("In_orario");
