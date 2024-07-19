@@ -90,14 +90,14 @@ class TrainSeeder extends Seeder
         //     $trainList->Cancellato = $trainData["Cancellato"];
         //     $trainList->save();
         // }
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 3; $i++) {
             $trainList = new Train();
             $trainList->Azienda = $faker->word();
             $trainList->Stazione_di_partenza = $faker->words(4, true);
             $trainList->Stazione_di_arrivo = $faker->words(4, true);
             $trainList->Orario_di_partenza = $faker->time();
             $trainList->Orario_di_arrivo = $faker->time();
-            $trainList->Codice_Treno = $faker->regexify();
+            $trainList->Codice_Treno = $faker->regexify('[A-Z]{5}[0-4]{3}');
             $trainList->Numero_Carrozze = $faker->numberBetween(1, 40);
             $trainList->In_orario = $faker->boolean();
             $trainList->Cancellato = $faker->boolean();
